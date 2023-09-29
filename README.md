@@ -17,10 +17,10 @@ Three different models are available for experimentation:
 * Deep Neural Network
 
 Each model is designed to operate on token embeddings and provide classification scores for 'entailment', 'contradiction', and 'neutral' labels.
+The models, data processing, and tokenizing are all built from scratch for educational purposes.
 
 <!--- Usage --><br />
 ## Usage
-
 Run the main script with various command-line arguments to specify the model, number of epochs, and other settings.
 
 ```python
@@ -30,6 +30,4 @@ python main.py --model=shallow --epochs=5 --device=cuda --batch_size=64 --embedd
 <!--- Built with... --><br />
 ## Built with...
 * [PyTorch](https://pytorch.org/) — model building and training
-* [tqdm](https://tqdm.github.io/) — progress bars
-* [Hugging Face Transformers](https://github.com/huggingface/transformers) — although not utilized in the final architecture, provides extensive NLP functionalities
 * [scikit-learn](https://scikit-learn.org/stable/) — for additional machine learning utilities
