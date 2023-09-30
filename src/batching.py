@@ -1,5 +1,6 @@
 # ===============[ IMPORTS ]===============
 import random
+
 import torch
 
 
@@ -18,16 +19,15 @@ def build_loader(data_dict, batch_size=64, shuffle=False):
     """
 
     def loader():
-        size = len(data_dict['premise'])
+        size = len(data_dict["premise"])
         data = data_dict.items()
 
         if shuffle:
-
             order = list(range(size))
             random.shuffle(order)
             data = {key: [value[i] for i in order] for key, value in data}.items()
 
-        return ({key: value[i:i + batch_size] for key, value in data} for i in range(0, size, batch_size))
+        return ({key: value[i : i + batch_size] for key, value in data} for i in range(0, size, batch_size))
 
     return loader
 

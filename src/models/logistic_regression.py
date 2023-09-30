@@ -1,6 +1,6 @@
 # ===============[ IMPORTS ]===============
-import torch.nn as nn
 import torch
+import torch.nn as nn
 
 
 # ===============[ MAX POOLING ]===============
@@ -32,7 +32,6 @@ class PooledLogisticRegression(nn.Module):
 
     # =====[ FORWARD ]=====
     def forward(self, premise, hypothesis):
-
         # Load previously initialized layers
         emb = self.embedding
         layer_pred = self.layer_pred

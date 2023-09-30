@@ -10,10 +10,10 @@ def load_datasets(data_directory):
     Reads the training and validation splits from disk and loads them into memory.
     """
 
-    with open(os.path.join(data_directory, 'train.json'), 'r') as f:
+    with open(os.path.join(data_directory, "train.json"), "r") as f:
         train = json.load(f)
 
-    with open(os.path.join(data_directory, 'validation.json'), 'r') as f:
+    with open(os.path.join(data_directory, "validation.json"), "r") as f:
         valid = json.load(f)
 
     return train, valid
@@ -32,8 +32,8 @@ def tokenize(text, max_length=None, normalize=True):
 
     if normalize:
         # Lowercase, remove non-alphanum
-        regexp = re.compile('[^a-zA-Z ]+')
-        text = [regexp.sub('', t.lower()) for t in text]
+        regexp = re.compile("[^a-zA-Z ]+")
+        text = [regexp.sub("", t.lower()) for t in text]
 
     return [t.split()[:max_length] for t in text]
 
@@ -58,7 +58,7 @@ def build_index_map(word_counts, max_words=None):
     Builds an index map that converts a word into an integer that can be accepted by THE model.
     """
     sorted_counts = sorted(word_counts.items(), key=lambda item: item[1], reverse=True)
-    sorted_words = ['[PAD]'] + [item[0] for item in sorted_counts]
+    sorted_words = ["[PAD]"] + [item[0] for item in sorted_counts]
 
     return {word: ix for ix, word in enumerate(sorted_words[:max_words])}
 

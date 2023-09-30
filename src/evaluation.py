@@ -1,10 +1,11 @@
 # ===============[ IMPORTS ]===============
 import torch
+
 from . import training
 
 
 # ===============[ F1 SCORE ]===============
-def f1_score(y, y_pred, threshold=0.5):
+def f1_score(y, y_pred):
     y_pred = torch.where(y_pred > 0.5, 1, 0)
 
     tp = (y * y_pred).sum()
@@ -21,7 +22,7 @@ def f1_score(y, y_pred, threshold=0.5):
 
 
 # ===============[ EVALUATE ]===============
-def eval_run(model, loader, device='cpu'):
+def eval_run(model, loader):
     """
     Iterates through a loader and predict the labels for each example.
     """
@@ -38,7 +39,7 @@ def eval_run(model, loader, device='cpu'):
     for batch in generator:
         with torch.no_grad():
             y_pred = training.forward_pass(model, batch)
-            y_true = torch.tensor(batch['label'])
+            y_true = torch.tensor(batch["label"])
 
             labels = torch.cat((labels, y_true), 0)
             predictions = torch.cat((predictions, y_pred), 0)

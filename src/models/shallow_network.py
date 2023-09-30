@@ -1,7 +1,8 @@
 # ===============[ IMPORTS ]===============
-from .logistic_regression import max_pool
-import torch.nn as nn
 import torch
+import torch.nn as nn
+
+from .logistic_regression import max_pool
 
 
 # ===============[ MODEL ]==========
