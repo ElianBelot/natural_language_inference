@@ -7,7 +7,7 @@
 
 <!--- About --><br />
 ## About
-This repo offers a PyTorch and HuggingFace-based toolkit for Natural Language Inference (NLI), a.k.a. Recognizing Textual Entailment (RTE).
+This project is a PyTorch and HuggingFace-based toolkit for the Natural Language Inference (NLI) task.
 The [Stanford NLI corpus](https://www.kaggle.com/datasets/stanfordu/stanford-natural-language-inference-corpus) is used, featuring 570k human-written English sentence pairs each labeled as 'entailment', 'contradiction', or 'neutral'.
 
 <!--- Models --><br />
@@ -32,3 +32,4 @@ python main.py --model=shallow --epochs=5 --device=cuda --batch_size=64 --embedd
 ## Built with...
 * [PyTorch](https://pytorch.org/) — model building and training
 * [scikit-learn](https://scikit-learn.org/stable/) — for additional machine learning utilities
+* [HuggingFace Transformers](https://huggingface.co/transformers/) — for utilizing and finetuning BERT
