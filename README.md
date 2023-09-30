@@ -2,8 +2,8 @@
 <br />
 <p align="center">
 <a href="#"><img src="https://www.tclf.org/sites/default/files/styles/crop_2000x700/public/thumbnails/image/CA_Stanford_StanfordUniversity_courtesyWikimediaCommons_2011_005_Hero.jpg?itok=B8YAapxD"></a>
-<h3 align="center">Finetuning BERT for Natural Language Inference with PyTorch</h3>
-<p align="center">Leveraging HuggingFace transformers to classify textual entailment on the Stanford NLI corpus.</p>
+<h3 align="center">Natural Language Inference with PyTorch</h3>
+<p align="center">Finetuning BERT to classify textual entailment on the Stanford NLI corpus.</p>
 
 <!--- About --><br />
 ## About
