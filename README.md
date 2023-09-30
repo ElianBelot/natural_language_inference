@@ -2,22 +2,23 @@
 <br />
 <p align="center">
 <a href="#"><img src="https://www.tclf.org/sites/default/files/styles/crop_2000x700/public/thumbnails/image/CA_Stanford_StanfordUniversity_courtesyWikimediaCommons_2011_005_Hero.jpg?itok=B8YAapxD"></a>
-<h3 align="center">Natural Language Inference with PyTorch</h3>
-<p align="center">A PyTorch implementation for classifying textual entailment on the Stanford NLI corpus.</p>
+<h3 align="center">Finetuning BERT for Natural Language Inference with PyTorch</h3>
+<p align="center">A PyTorch project leveraging HuggingFace transformers to classify textual entailment on the Stanford NLI corpus.</p>
 
 <!--- About --><br />
 ## About
-This repository provides a PyTorch-based solution for the task of Natural Language Inference (NLI), also known as Recognizing Textual Entailment (RTE). It uses the [Stanford Natural Language Inference corpus](https://www.kaggle.com/datasets/stanfordu/stanford-natural-language-inference-corpus) as the underlying dataset, comprising 570k human-written English sentence pairs that are manually labeled for balanced classification with labels: entailment, contradiction, and neutral.
+This repo offers a PyTorch and HuggingFace-based toolkit for Natural Language Inference (NLI), a.k.a. Recognizing Textual Entailment (RTE).
+The [Stanford NLI corpus](https://www.kaggle.com/datasets/stanfordu/stanford-natural-language-inference-corpus) is used, featuring 570k human-written English sentence pairs each labeled as 'entailment', 'contradiction', or 'neutral'.
 
-<!--- Architecture --><br />
-## Architecture
-Three different models are available for experimentation:
+<!--- Models --><br />
+## Models
+The main model is a BERT transformer finetuned on the task.
+Other models are also available for experimentation:
 * Pooled Logistic Regression
 * Shallow Neural Network
 * Deep Neural Network
 
-Each model is designed to operate on token embeddings and provide classification scores for 'entailment', 'contradiction', and 'neutral' labels.
-The models, data processing, and tokenizing are all built from scratch for educational purposes.
+Each model is fine-tuned to work with token embeddings and gives classification scores for the three NLI labels.
 
 <!--- Usage --><br />
 ## Usage
